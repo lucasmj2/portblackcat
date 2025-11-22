@@ -55,7 +55,7 @@ export const PortfolioSlider = ({ projects, className }) => {
 
   return (
     <div
-      className={`relative w-full min-h-[750px] md:min-h-[700px] overflow-hidden bg-black text-white p-8 md:p-12 border border-purple-500/20 rounded-2xl ${className || ''}`}
+      className={`relative w-full min-h-[650px] md:min-h-[600px] overflow-hidden bg-black text-white p-6 md:p-10 border border-purple-500/20 rounded-2xl ${className || ''}`}
     >
       <div className="grid grid-cols-1 md:grid-cols-12 gap-8 h-full">
         {/* Left Column: Meta and Thumbnails */}
@@ -99,7 +99,7 @@ export const PortfolioSlider = ({ projects, className }) => {
         </div>
 
         {/* Center Column: Main Image */}
-        <div className="md:col-span-5 relative h-96 min-h-[500px] md:min-h-[600px] order-1 md:order-2 flex items-center justify-center bg-black">
+        <div className="md:col-span-5 relative h-80 min-h-[400px] md:min-h-[500px] order-1 md:order-2 flex items-center justify-center bg-black">
           <AnimatePresence initial={false} custom={direction}>
             <motion.div
               key={currentIndex}
@@ -127,7 +127,7 @@ export const PortfolioSlider = ({ projects, className }) => {
         {/* Right Column: Text and Navigation */}
         <div className="md:col-span-4 flex flex-col justify-between md:pl-8 order-3 md:order-3">
           {/* Text Content */}
-          <div className="relative overflow-hidden pt-4 md:pt-24 min-h-[200px]">
+          <div className="relative overflow-hidden pt-4 md:pt-16 min-h-[180px]">
             <AnimatePresence initial={false} custom={direction} mode="wait">
               <motion.div
                 key={currentIndex}
@@ -138,29 +138,29 @@ export const PortfolioSlider = ({ projects, className }) => {
                 exit="exit"
                 transition={{ duration: 0.6, ease: [0.4, 0, 0.2, 1] }}
               >
-                <p className="text-sm font-medium text-purple-400 uppercase tracking-wider">
+                <p className="text-xs font-medium text-purple-400 uppercase tracking-wider">
                   {activeProject.category}
                 </p>
-                <h3 className="text-2xl font-bold mt-2 font-orbitron text-white">
+                <h3 className="text-xl font-bold mt-2 font-orbitron text-white">
                   {activeProject.title}
                 </h3>
-                <blockquote className="mt-6 text-xl md:text-2xl font-medium leading-snug text-gray-300">
+                <blockquote className="mt-4 text-lg md:text-xl font-medium leading-snug text-gray-300">
                   {activeProject.description}
                 </blockquote>
 
                 {/* Metrics */}
-                <div className="flex items-center gap-6 mt-8 pt-6 border-t border-gray-800">
-                  <div className="flex items-center gap-2">
+                <div className="flex items-center justify-center gap-8 mt-6 pt-5 border-t border-gray-800">
+                  <div className="flex flex-col items-center gap-1">
                     <Eye className="w-5 h-5 text-purple-400" />
-                    <span className="text-base font-semibold text-gray-300">{activeProject.metrics.views}</span>
+                    <span className="text-sm font-semibold text-gray-300">{activeProject.metrics.views}</span>
                   </div>
-                  <div className="flex items-center gap-2">
+                  <div className="flex flex-col items-center gap-1">
                     <ThumbsUp className="w-5 h-5 text-pink-400" />
-                    <span className="text-base font-semibold text-gray-300">{activeProject.metrics.engagement}</span>
+                    <span className="text-sm font-semibold text-gray-300">{activeProject.metrics.engagement}</span>
                   </div>
-                  <div className="flex items-center gap-2">
+                  <div className="flex flex-col items-center gap-1">
                     <MessageSquare className="w-5 h-5 text-cyan-400" />
-                    <span className="text-base font-semibold text-gray-300">{activeProject.metrics.shares}</span>
+                    <span className="text-sm font-semibold text-gray-300">{activeProject.metrics.shares}</span>
                   </div>
                 </div>
               </motion.div>
