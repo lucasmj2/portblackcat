@@ -71,24 +71,24 @@ const Specialties = () => {
               transition={{ duration: 0.6, delay: index * 0.1 }}
               className="group"
             >
-              <div className="h-full p-8 border border-gray-800 bg-gray-900/20 hover:border-gray-700 transition-all duration-300">
+              <div className="h-full p-6 border border-gray-800 bg-gray-900/20 hover:border-gray-700 transition-all duration-300">
                 {/* Icon */}
-                <div className="mb-6">
-                  <specialty.icon className="w-12 h-12 text-white group-hover:scale-110 transition-transform duration-300" />
+                <div className="mb-4">
+                  <specialty.icon className="w-10 h-10 text-white group-hover:scale-110 transition-transform duration-300" />
                 </div>
 
                 {/* Title */}
-                <h3 className="font-orbitron text-2xl font-bold text-white mb-4 tracking-tight">
+                <h3 className="font-orbitron text-xl font-bold text-white mb-3 tracking-tight">
                   {specialty.title}
                 </h3>
 
                 {/* Description */}
-                <p className="text-gray-400 leading-relaxed text-base">
+                <p className="text-gray-400 leading-relaxed text-sm">
                   {specialty.description}
                 </p>
 
                 {/* Hover line */}
-                <div className="mt-6 h-px bg-gradient-to-r from-white to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                <div className="mt-4 h-px bg-gradient-to-r from-white to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
               </div>
             </motion.div>
           ))}
