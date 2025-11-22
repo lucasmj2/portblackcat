@@ -165,7 +165,7 @@ const Metric = ({
     <div
       ref={ref}
       className={cn(
-        "flex flex-col lg:border-r py-12 relative group/feature border-purple-500/20",
+        "flex flex-col lg:border-r py-8 relative group/feature border-purple-500/20",
         (index === 0 || index === 4) && "lg:border-l border-purple-500/20",
         index < 4 && "lg:border-b border-purple-500/20"
       )}
@@ -176,19 +176,19 @@ const Metric = ({
       {index >= 4 && (
         <div className="opacity-0 group-hover/feature:opacity-100 transition duration-200 absolute inset-0 h-full w-full bg-gradient-to-b from-purple-900/20 to-transparent pointer-events-none" />
       )}
-      <div className="mb-6 relative z-10 px-10 text-purple-400 flex justify-center">
+      <div className="mb-4 relative z-10 px-8 text-purple-400 flex justify-center">
         {icon}
       </div>
-      <div className="text-xl font-bold mb-4 relative z-10 px-10 text-center min-h-[3rem] flex items-center justify-center">
+      <div className="text-lg font-bold mb-3 relative z-10 px-8 text-center min-h-[2.5rem] flex items-center justify-center">
         <div className="absolute left-0 inset-y-0 h-6 group-hover/feature:h-8 w-1 rounded-tr-full rounded-br-full bg-purple-500/30 group-hover/feature:bg-gradient-to-b group-hover/feature:from-purple-500 group-hover/feature:to-pink-500 transition-all duration-200 origin-center" />
         <span className="group-hover/feature:translate-x-2 transition duration-200 inline-block text-white font-orbitron whitespace-nowrap">
           {title}
         </span>
       </div>
-      <div className="text-3xl md:text-4xl font-bold mb-6 relative z-10 px-10 text-center">
+      <div className="text-2xl md:text-3xl font-bold mb-4 relative z-10 px-8 text-center">
         <span className="gradient-text font-orbitron">{animatedValue}</span>
       </div>
-      <p className="text-base text-gray-400 relative z-10 px-12 text-center mx-auto leading-relaxed">
+      <p className="text-sm text-gray-400 relative z-10 px-10 text-center mx-auto leading-relaxed">
         {description}
       </p>
     </div>
